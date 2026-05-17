@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="py-5 bg-primary text-white">
+<section class="py-5 text-white" style="background: linear-gradient(135deg, #0a5b78, #07869a);">
     <div class="container py-4 text-center">
-        <div class="display-3 mb-3 text-accent"><i class="bi {{ $department->icon ?? 'bi-hospital' }}"></i></div>
-        <h1 class="display-4 fw-bold">{{ $department->name }}</h1>
+        <div class="display-3 mb-3" style="color: #5df3d6;"><i class="bi {{ $department->icon ?? 'bi-hospital' }}"></i></div>
+        <h1 class="display-4 fw-bold text-white">{{ $department->name }}</h1>
     </div>
 </section>
 

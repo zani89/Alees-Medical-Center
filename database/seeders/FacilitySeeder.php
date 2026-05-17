@@ -10,12 +10,46 @@ class FacilitySeeder extends Seeder
     public function run(): void
     {
         $facilities = [
-            ['name' => 'NICU', 'description' => 'State-of-the-art Neonatal Intensive Care Unit for premature and ill newborns.', 'icon' => 'bi-heart-pulse'],
-            ['name' => 'ECG', 'description' => 'Advanced Electrocardiogram services for heart monitoring.', 'icon' => 'bi-activity'],
-            ['name' => 'Physiotherapy', 'description' => 'Expert physiotherapy sessions to help you recover your mobility.', 'icon' => 'bi-person-arms-up'],
-            ['name' => '24/7 Emergency', 'description' => 'Round-the-clock emergency medical care and trauma response.', 'icon' => 'bi-truck-front'],
-            ['name' => 'Pharmacy', 'description' => 'Fully stocked pharmacy available 24/7 for all your medication needs.', 'icon' => 'bi-capsule'],
-            ['name' => 'Laboratory', 'description' => 'In-house diagnostic laboratory with quick and accurate test results.', 'icon' => 'bi-virus'],
+            [
+                'name' => 'Women’s Healthcare',
+                'description' => 'Dedicated gynecology, obstetrics, and premium maternity care facilities.',
+                'icon' => 'bi-gender-female'
+            ],
+            [
+                'name' => 'Cardiology',
+                'description' => 'Advanced heart care diagnostic setup including ECG and professional consultations.',
+                'icon' => 'bi-heart-pulse'
+            ],
+            [
+                'name' => 'Chinese Medicine',
+                'description' => 'Traditional and alternative Chinese medical treatments and herbal setups.',
+                'icon' => 'bi-leaf-fill'
+            ],
+            [
+                'name' => 'Homeopathy',
+                'description' => 'Safe, holistic, and professional homeopathic medicine consultation suites.',
+                'icon' => 'bi-capsule'
+            ],
+            [
+                'name' => 'ECG',
+                'description' => 'Modern Electrocardiogram monitoring equipment for rapid, precise diagnostics.',
+                'icon' => 'bi-activity'
+            ],
+            [
+                'name' => 'Physiotherapy',
+                'description' => 'Rehabilitation gymnasium and physical therapy suites with expert guidance.',
+                'icon' => 'bi-person-walking'
+            ],
+            [
+                'name' => 'NICU',
+                'description' => 'Neonatal Intensive Care Unit with modern incubators and 24/7 specialist pediatric care.',
+                'icon' => 'bi-heart-pulse-fill'
+            ],
+            [
+                'name' => 'Delivery Facility',
+                'description' => 'State-of-the-art labor rooms and maternity suites offering a secure, comfortable birth experience.',
+                'icon' => 'bi-hospital'
+            ],
         ];
 
         foreach ($facilities as $facility) {

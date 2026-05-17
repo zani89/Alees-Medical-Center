@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="py-5 bg-primary text-white text-center">
+<section class="py-5 text-white text-center" style="background: linear-gradient(135deg, #0a5b78, #07869a);">
     <div class="container py-4">
-        <h1 class="display-5 fw-bold">Centers of Excellence</h1>
-        <p class="lead">Comprehensive care across various medical disciplines.</p>
+        <h1 class="display-5 fw-bold text-white">Centers of Excellence</h1>
+        <p class="lead text-white" style="opacity: 0.85;">Comprehensive care across various medical disciplines.</p>
     </div>
 </section>
 

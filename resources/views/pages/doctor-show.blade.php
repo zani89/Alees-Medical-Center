@@ -8,7 +8,7 @@
                 <div class="card border-0 shadow-sm text-center p-4 h-100">
                     <img src="{{ $doctor->photo }}" alt="{{ $doctor->name }}" class="rounded-circle mx-auto mb-4 border border-4 border-white shadow" width="200" height="200" style="object-fit: cover;">
                     <h3 class="fw-bold text-primary">{{ $doctor->name }}</h3>
-                    <p class="text-accent fs-5 mb-3">{{ $doctor->specialty }}</p>
+                    <p class="fs-5 mb-3" style="color: #2d6a5a;">{{ $doctor->specialty }}</p>
                     <div class="d-flex justify-content-center gap-2 flex-wrap mb-4">
                         <span class="badge bg-primary rounded-pill px-3 py-2">{{ $doctor->department->name }}</span>
                         <span class="badge bg-secondary rounded-pill px-3 py-2">{{ $doctor->experience_years }} Years Exp</span>
@@ -24,7 +24,7 @@
 
                         <h5 class="fw-bold text-primary mb-3">Qualifications</h5>
                         <ul class="list-group list-group-flush mb-5">
-                            <li class="list-group-item px-0 text-muted"><i class="bi bi-check-circle-fill text-accent me-2"></i> {{ $doctor->qualifications }}</li>
+                            <li class="list-group-item px-0 text-muted"><i class="bi bi-check-circle-fill me-2" style="color: #438e78;"></i> {{ $doctor->qualifications }}</li>
                         </ul>
 
                         <h5 class="fw-bold text-primary mb-3">Working Hours</h5>

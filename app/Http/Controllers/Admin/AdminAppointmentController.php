@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\Appointment;
-use Illuminate\Http\Request;
 
 class AdminAppointmentController extends Controller
 {

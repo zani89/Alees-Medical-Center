@@ -12,11 +12,17 @@ class DepartmentSeeder extends Seeder
     {
         $departments = [
             ['name' => 'Cardiology', 'icon' => 'bi-heart-pulse'],
-            ['name' => 'Neurology', 'icon' => 'bi-brain'],
-            ['name' => 'Orthopedics', 'icon' => 'bi-bandaid'],
-            ['name' => 'Pediatrics', 'icon' => 'bi-emoji-smile'],
-            ['name' => 'Gynaecology', 'icon' => 'bi-gender-female'],
-            ['name' => 'General Surgery', 'icon' => 'bi-hospital'],
+            ['name' => 'Gynecology', 'icon' => 'bi-gender-female'],
+            ['name' => 'Dermatology', 'icon' => 'bi-palette-fill'],
+            ['name' => 'Pediatrics', 'icon' => 'bi-emoji-smile-fill'],
+            ['name' => 'Dentistry', 'icon' => 'bi-activity'],
+            ['name' => 'Ophthalmology', 'icon' => 'bi-eye-fill'],
+            ['name' => 'Orthopedics', 'icon' => 'bi-clipboard-pulse'],
+            ['name' => 'Gastroenterology', 'icon' => 'bi-capsule'],
+            ['name' => 'Psychiatry', 'icon' => 'bi-shield-fill-check'],
+            ['name' => 'General Surgery', 'icon' => 'bi-scissors'],
+            ['name' => 'Physiotherapy', 'icon' => 'bi-person-walking'],
+            ['name' => 'Alternative Medicine', 'icon' => 'bi-leaf-fill'],
         ];
 
         foreach ($departments as $dept) {

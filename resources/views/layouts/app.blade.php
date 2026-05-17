@@ -37,6 +37,7 @@
             color: #4a5568;
             background-color: var(--bg-light);
             -webkit-font-smoothing: antialiased;
+            padding-top: 95px; /* Offset fixed-top glass navbar */
         }
 
         h1, h2, h3, h4, h5, h6, .font-heading {

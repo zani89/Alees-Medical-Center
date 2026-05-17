@@ -2,10 +2,10 @@
 
 @section('content')
 <!-- Include the same contact section from home page but with a header -->
-<section class="py-5 bg-primary text-white text-center">
+<section class="py-5 text-white text-center" style="background: linear-gradient(135deg, #0a5b78, #07869a);">
     <div class="container py-4">
-        <h1 class="display-5 fw-bold">Contact Us</h1>
-        <p class="lead">We're here to help and answer any questions you might have.</p>
+        <h1 class="display-5 fw-bold text-white">Contact Us</h1>
+        <p class="lead text-white" style="opacity: 0.85;">We're here to help and answer any questions you might have.</p>
     </div>
 </section>
 
@@ -13,30 +13,30 @@
 <section class="py-5">
     <div class="container py-4">
         <div class="row gy-5 bg-white shadow-sm rounded overflow-hidden">
-            <div class="col-lg-5 bg-primary text-white p-5">
+            <div class="col-lg-5 text-white p-5" style="background: linear-gradient(135deg, #0a5b78, #07869a);">
                 <h3 class="mb-4 text-white fw-bold">Get in Touch</h3>
                 <div class="d-flex mb-4">
-                    <i class="bi bi-geo-alt fs-3 me-3 text-accent"></i>
+                    <i class="bi bi-geo-alt fs-3 me-3" style="color: #5df3d6;"></i>
                     <div>
                         <h5 class="mb-1 text-white">Location</h5>
                         <p class="mb-0 text-white-50">House #233, Main Double Road, G-15/2, Opposite Society Office, Islamabad<br>H #153, Street #1, G-15/1, Islamabad</p>
                     </div>
                 </div>
                 <div class="d-flex mb-4">
-                    <i class="bi bi-telephone fs-3 me-3 text-accent"></i>
+                    <i class="bi bi-telephone fs-3 me-3" style="color: #5df3d6;"></i>
                     <div>
                         <h5 class="mb-1 text-white">Contact</h5>
                         <p class="mb-0 text-white-50">0341-5061201<br>0331-1400626<br>info@aleesmedical.com</p>
                     </div>
                 </div>
                 <div class="d-flex mb-4">
-                    <i class="bi bi-clock fs-3 me-3 text-accent"></i>
+                    <i class="bi bi-clock fs-3 me-3" style="color: #5df3d6;"></i>
                     <div>
                         <h5 class="mb-1 text-white">Hours</h5>
                         <p class="mb-0 text-white-50">Mon - Sat: 8:00 AM - 8:00 PM<br>Emergency: 24/7</p>
                     </div>
                 </div>
-                <a href="https://wa.me/923415061201" target="_blank" class="btn btn-accent bg-accent text-white rounded-pill px-4 mt-3 w-100">
+                <a href="https://wa.me/923415061201" target="_blank" class="btn rounded-pill px-4 mt-3 w-100 text-white fw-bold" style="background: linear-gradient(135deg, #25D366, #128C7E);">
                     <i class="bi bi-whatsapp me-2"></i> Chat on WhatsApp
                 </a>
             </div>

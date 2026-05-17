@@ -6,12 +6,12 @@
     <div class="container position-relative z-1">
         <div class="row align-items-center gy-5">
             <div class="col-lg-6 text-white pe-lg-5">
-                <span class="badge bg-white text-primary px-3 py-2 rounded-pill mb-4 fw-semibold shadow-sm">
-                    <i class="bi bi-stars text-accent me-1"></i> Premium Healthcare
+                <span class="badge bg-white px-3 py-2 rounded-pill mb-4 fw-semibold shadow-sm" style="color: #0a5b78;">
+                    <i class="bi bi-stars me-1" style="color: #d97706;"></i> Premium Healthcare
                 </span>
                 <h1 class="display-3 fw-bold mb-4 font-heading text-white" style="line-height: 1.1;">
                     Your Health, <br>
-                    <span class="text-accent">Our Masterpiece.</span>
+                    <span style="color: #5df3d6;">Our Masterpiece.</span>
                 </h1>
                 <p class="lead mb-5 opacity-75" style="font-weight: 300;">
                     Experience world-class medical, dental, and aesthetic treatments in a state-of-the-art facility designed for your comfort and recovery.
@@ -100,7 +100,7 @@
 <section class="py-5 my-5">
     <div class="container">
         <div class="text-center mb-5">
-            <span class="text-accent fw-bold text-uppercase tracking-wider">Centers of Excellence</span>
+            <span class="fw-bold text-uppercase tracking-wider" style="color: #2d6a5a;">Centers of Excellence</span>
             <h2 class="display-5 mt-2 mb-3 font-heading">Our Departments</h2>
             <p class="text-muted mx-auto" style="max-width: 600px;">We provide comprehensive care across multiple disciplines, led by industry experts using advanced technology.</p>
         </div>
@@ -118,7 +118,7 @@
 </section>
 
 <!-- Contact CTA Section -->
-<section class="py-5 position-relative overflow-hidden bg-primary text-white mt-5">
+<section class="py-5 position-relative overflow-hidden text-white mt-5" style="background: linear-gradient(135deg, #0a5b78, #07869a);">
     <!-- Decorative SVG -->
     <svg class="position-absolute top-0 end-0 h-100 opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 50%;">
         <path fill="currentColor" d="M0,0 C50,100 80,100 100,0 L100,100 L0,100 Z"></path>

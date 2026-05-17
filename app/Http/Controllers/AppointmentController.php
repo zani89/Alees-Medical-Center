@@ -26,10 +26,28 @@ class AppointmentController extends Controller
     {
         $appointment = Appointment::create($request->validated());
 
+        // Load relationships to retrieve name values for the WhatsApp message
+        $appointment->load(['doctor', 'department', 'service']);
+
         if ($appointment->email) {
             Mail::to($appointment->email)->send(new AppointmentConfirmation($appointment));
         }
 
-        return redirect()->back()->with('success', 'Your appointment request has been submitted successfully! We will contact you shortly.');
+        // Official Clinic WhatsApp Number: 923415061201 (emergency line)
+        $whatsappNumber = '923415061201';
+        $message = "Hello Alees Medical Center, I have just booked an appointment! Details:\n\n"
+                 . "👤 *Patient:* " . $appointment->patient_name . "\n"
+                 . "📞 *Phone:* " . $appointment->phone . "\n"
+                 . "📅 *Preferred Date:* " . \Carbon\Carbon::parse($appointment->preferred_date)->format('M d, Y') . "\n"
+                 . "🏥 *Department:* " . $appointment->department->name . "\n"
+                 . "👨‍⚕️ *Doctor:* " . ($appointment->doctor->name ?? 'Any Available') . "\n"
+                 . "💼 *Service:* " . ($appointment->service->name ?? 'General Consultation');
+
+        $whatsappUrl = "https://wa.me/" . $whatsappNumber . "?text=" . urlencode($message);
+
+        return redirect()->back()->with([
+            'success' => 'Your appointment request has been submitted successfully! We will contact you shortly.',
+            'whatsapp_url' => $whatsappUrl
+        ]);
     }
 }

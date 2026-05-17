@@ -37,7 +37,12 @@
                             {{ $appt->department->name }}<br>
                             <small class="text-muted">{{ $appt->service->name ?? '' }}</small>
                         </td>
-                        <td>{{ $appt->doctor->name ?? 'Any' }}</td>
+                        <td>
+                            {{ $appt->doctor->name ?? 'Any' }}
+                            @if($appt->doctor && $appt->doctor->phone)
+                                <br><small class="text-muted"><i class="bi bi-telephone-fill small"></i> {{ $appt->doctor->phone }}</small>
+                            @endif
+                        </td>
                         <td>
                             <span class="badge {{ $appt->status === 'confirmed' ? 'bg-success' : ($appt->status === 'cancelled' ? 'bg-danger' : 'bg-warning') }}">
                                 {{ ucfirst($appt->status) }}

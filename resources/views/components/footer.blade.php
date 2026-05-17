@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row gy-4">
             <div class="col-lg-4">
-                <h4 class="text-white mb-3"><i class="bi bi-hospital text-accent me-2"></i> Alees Medical, Dental & Aesthetic Center</h4>
+                <h4 class="text-white mb-3"><i class="bi bi-hospital me-2" style="color: #5df3d6;"></i> Alees Medical, Dental & Aesthetic Center</h4>
                 <p class="footer-custom-text">Providing world-class healthcare with compassion and excellence. Your health is our priority.</p>
                 <div class="d-flex gap-3">
                     <a href="#" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
@@ -43,9 +43,9 @@
             <div class="col-lg-3">
                 <h5 class="text-white mb-3">Contact Info</h5>
                 <ul class="list-unstyled footer-custom-text">
-                    <li class="mb-2"><i class="bi bi-geo-alt me-2 text-accent"></i> House #233, Main Double Road, G-15/2, Opposite Society Office, Islamabad<br><i class="bi bi-geo-alt me-2 text-transparent"></i> H #153, Street #1, G-15/1, Islamabad</li>
-                    <li class="mb-2"><i class="bi bi-telephone me-2 text-accent"></i> 0341-5061201<br><i class="bi bi-telephone me-2 text-transparent"></i> 0331-1400626</li>
-                    <li class="mb-2"><i class="bi bi-envelope me-2 text-accent"></i> info@aleesmedical.com</li>
+                    <li class="mb-2"><i class="bi bi-geo-alt me-2" style="color: #5df3d6;"></i> House #233, Main Double Road, G-15/2, Opposite Society Office, Islamabad<br><i class="bi bi-geo-alt me-2 text-transparent"></i> H #153, Street #1, G-15/1, Islamabad</li>
+                    <li class="mb-2"><i class="bi bi-telephone me-2" style="color: #5df3d6;"></i> 0341-5061201<br><i class="bi bi-telephone me-2 text-transparent"></i> 0331-1400626</li>
+                    <li class="mb-2"><i class="bi bi-envelope me-2" style="color: #5df3d6;"></i> info@aleesmedical.com</li>
                 </ul>
             </div>
         </div>

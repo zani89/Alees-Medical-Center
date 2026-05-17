@@ -15,7 +15,7 @@
             @foreach($services as $service)
                 <div class="col">
                     <div class="premium-card h-100 p-5 d-flex flex-column text-start">
-                        <div class="mb-4 d-inline-flex align-items-center justify-content-center bg-accent text-white rounded-4 shadow-sm" style="width: 60px; height: 60px;">
+                        <div class="mb-4 d-inline-flex align-items-center justify-content-center rounded-4 shadow-sm text-white" style="width: 60px; height: 60px; background-color: #438e78;">
                             <i class="bi {{ empty($service->icon) ? 'bi-check2-circle' : (str_starts_with($service->icon, 'bi-') ? $service->icon : 'bi-'.$service->icon) }} fs-3"></i>
                         </div>
                         <h4 class="font-heading text-primary mb-3">{{ $service->name }}</h4>
@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="text-end">
                                     <small class="text-muted d-block mb-1">Fee</small>
-                                    <span class="fs-5 text-accent fw-bold">Rs. {{ number_format($service->fee, 0) }}</span>
+                                    <span class="fs-5 fw-bold" style="color: #2d6a5a;">Rs. {{ number_format($service->fee, 0) }}</span>
                                 </div>
                             </div>
                         </div>

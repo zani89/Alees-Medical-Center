@@ -29,6 +29,38 @@
                 <li class="nav-item mx-1">
                     <a class="nav-link {{ request()->routeIs('contact.index') ? 'active' : '' }}" href="{{ route('contact.index') }}">Contact</a>
                 </li>
+                @auth
+                    @if(Auth::user()->role === 'admin')
+                        <li class="nav-item mx-1">
+                            <a class="nav-link {{ request()->is('admin*') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}">Admin Portal</a>
+                        </li>
+                    @elseif(Auth::user()->role === 'doctor')
+                        <li class="nav-item mx-1">
+                            <a class="nav-link {{ request()->is('doctor*') ? 'active' : '' }}" href="{{ route('doctor.dashboard') }}">Doctor Portal</a>
+                        </li>
+                    @elseif(Auth::user()->role === 'receptionist')
+                        <li class="nav-item mx-1">
+                            <a class="nav-link {{ request()->is('receptionist*') ? 'active' : '' }}" href="{{ route('receptionist.dashboard') }}">Receptionist Portal</a>
+                        </li>
+                    @else
+                        <li class="nav-item mx-1">
+                            <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">My Schedule</a>
+                        </li>
+                    @endif
+                    <li class="nav-item mx-1">
+                        <form method="POST" action="{{ route('logout') }}" class="d-inline">
+                            @csrf
+                            <button type="submit" class="nav-link border-0 bg-transparent" style="cursor: pointer;">Logout</button>
+                        </form>
+                    </li>
+                @else
+                    <li class="nav-item mx-1">
+                        <a class="nav-link {{ request()->routeIs('login') ? 'active' : '' }}" href="{{ route('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link {{ request()->routeIs('register') ? 'active' : '' }}" href="{{ route('register') }}">Register</a>
+                    </li>
+                @endauth
             </ul>
             <div class="d-flex ms-lg-4 mt-3 mt-lg-0">
                 <a href="{{ route('appointment.create') }}" class="btn btn-accent rounded-pill px-4 py-2 fw-semibold">Book Appointment</a>

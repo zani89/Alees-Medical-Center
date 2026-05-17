@@ -13,8 +13,16 @@
                     <div class="card-body px-5 pb-5">
                         
                         @if(session('success'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                {{ session('success') }}
+                            <div class="alert alert-success alert-dismissible fade show p-4 rounded-4 shadow-sm border-0 border-start border-4 border-success" role="alert" style="background-color: #f0fdf4;">
+                                <h5 class="fw-bold text-success mb-2"><i class="bi bi-check-circle-fill me-2"></i>Appointment Request Received!</h5>
+                                <p class="text-muted mb-3">{{ session('success') }}</p>
+                                @if(session('whatsapp_url'))
+                                    <hr class="my-3 opacity-25">
+                                    <p class="small text-dark mb-3">⚡ <strong>Get Instant Confirmation:</strong> Click the button below to send your pre-filled booking summary directly to our official WhatsApp number!</p>
+                                    <a href="{{ session('whatsapp_url') }}" target="_blank" class="btn btn-success rounded-pill fw-bold px-4 py-2 d-inline-flex align-items-center gap-2 shadow" style="background-color: #25D366; border-color: #25D366;">
+                                        <i class="bi bi-whatsapp"></i> Send details via WhatsApp
+                                    </a>
+                                @endif
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                         @endif

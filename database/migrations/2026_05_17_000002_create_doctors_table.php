@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('specialty');
             $table->string('qualifications');
+            $table->string('email')->unique()->nullable();
             $table->integer('experience_years')->default(0);
             $table->string('photo')->nullable();
             $table->text('bio')->nullable();
