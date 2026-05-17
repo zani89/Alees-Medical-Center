@@ -1,59 +1,101 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Alees Medical, Dental & Aesthetic Center Portal
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A premium, full-stack business website and patient scheduling portal built for **Alees Medical, Dental & Aesthetic Center**. This application provides a modern, responsive user experience for patient self-scheduling, coupled with a robust, secure administrative management dashboard to monitor and process clinic operations.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 GitHub Repository Details
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+If you are setting up your repository on GitHub, here are the recommended details:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+*   **Repository Name:** `alees-medical-center`
+*   **Description:** `A premium full-stack hospital management & patient booking portal built with Laravel 11, Bootstrap 5, and Laravel Breeze. Features dynamic appointment scheduling, doctor/service directories, and a comprehensive admin management panel.`
+*   **Topics:** `laravel`, `bootstrap5`, `hospital-management`, `appointment-booking`, `full-stack`, `admin-dashboard`, `laravel-breeze`
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## ✨ Features
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🌟 Premium Frontend Experience
+*   **Modern Aesthetic:** Implements a premium dark-teal and mint-green palette utilizing glassmorphism (frosted blurs), deep soft shadows, and clean modern typography (`Outfit` and `Inter` Google Fonts).
+*   **Micro-Animations:** Seamless hover-up card transformations, interactive glowing fields, and live-counting home statistics to capture patient engagement.
+*   **Responsive Directories:** Dynamic pages highlighting clinic **Services** (with pricing), **Facilities** (surgeries, diagnostics), and **Doctors** (qualifications, direct contact, quick booking).
 
-## Laravel Sponsors
+### 📅 Patient & Booking Life-Cycle
+*   **Interactive Scheduling:** Complete, secure appointment booking form dynamically binding Departments, Doctors, and Services.
+*   **Patient Dashboard:** Real-time lookup of all upcoming and historical appointments, displaying status updates (Pending, Approved, Completed, Cancelled) dynamically.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 🛡️ Administrative Portal (`/admin`)
+*   **Clinic Metrics:** Centralized dashboard tracking active appointments, pending requests, total earnings, and registered doctors.
+*   **Appointment Lifecycle Control:** Live panel to approve, complete, or cancel patient bookings with instant state changes.
+*   **Restricted Route Protection:** Fully guarded backend directory segregating standard patient/guest views from administrative operations.
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🛠️ Tech Stack
 
-## Contributing
+*   **Backend:** Laravel 11.x (PHP 8.2+)
+*   **Authentication:** Laravel Breeze (Custom split layout separating guest layouts from Tailwind administrative layouts)
+*   **Frontend Styling:** Bootstrap 5.x CDN, Custom Vanilla CSS Design System, Bootstrap Icons
+*   **Database:** MySQL (MariaDB)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## ⚙️ Installation & Setup
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Follow these steps to run the project locally on your machine:
 
-## Security Vulnerabilities
+### 1. Clone & Navigate
+```bash
+git clone https://github.com/YOUR_USERNAME/alees-medical-center.git
+cd alees-medical-center
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 2. Install Dependencies
+Ensure you have Composer installed, then run:
+```bash
+composer install
+```
 
-## License
+### 3. Environment Configuration
+Duplicate the configuration template file and generate the application encryption key:
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 4. Database Setup
+1. Open your `.env` file and configure your MySQL database credentials:
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=hospital_db
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
+2. Create the database in your MySQL system (e.g. via phpMyAdmin or XAMPP) named `hospital_db`.
+
+### 5. Migration & Seed Data
+Initialize your database schemas (Users, Doctors, Appointments, Services, Facilities) and seed the mock data:
+```bash
+php artisan migrate:fresh --seed
+```
+
+### 6. Local Server launch
+Fire up the local PHP development server:
+```bash
+php artisan serve
+```
+Access the application locally at: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+---
+
+## 📂 Key Directory Outline
+
+*   `app/Http/Controllers/` - Contains core logic controllers (`AppointmentController`, `AdminController`, `ServiceController`, etc.)
+*   `app/Models/` - Core database Eloquent models (`Doctor`, `Service`, `Facility`, `Appointment`).
+*   `database/seeders/` - Initial databases populator scripts (`ServiceSeeder`, `FacilitySeeder`, `DoctorSeeder`).
+*   `resources/views/layouts/` - Custom layouts: `app.blade.php` (Bootstrap Guest theme) and `breeze.blade.php` (Tailwind Auth dashboard).
+*   `resources/views/pages/` - Customer-facing directory (`home`, `services`, `appointment`, `facilities`).
+*   `routes/web.php` - Secure, middleware-segregated routing index.
