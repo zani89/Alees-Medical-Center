@@ -50,4 +50,19 @@ class AppointmentController extends Controller
             'whatsapp_url' => $whatsappUrl
         ]);
     }
+
+    public function cancel(Request $request, Appointment $appointment)
+    {
+        if ($appointment->email !== auth()->user()->email) {
+            abort(403, 'Unauthorized action.');
+        }
+
+        if ($appointment->status !== 'pending') {
+            return redirect()->back()->with('error', 'Only pending appointments can be cancelled.');
+        }
+
+        $appointment->update(['status' => 'cancelled']);
+
+        return redirect()->route('dashboard')->with('success', 'Your appointment has been successfully cancelled.');
+    }
 }

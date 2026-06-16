@@ -67,6 +67,10 @@ Route::get('/dashboard', function () {
     return view('dashboard', compact('appointments'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::patch('/dashboard/appointments/{appointment}/cancel', [AppointmentController::class, 'cancel'])
+    ->name('appointments.cancel')
+    ->middleware(['auth', 'verified']);
+
 // Breeze Auth Profile
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
