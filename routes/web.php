@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DoctorController;
@@ -10,6 +11,24 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Appointment;
+
+Route::get('/health', function () {
+    $databaseOk = false;
+
+    try {
+        DB::connection()->getPdo();
+        $databaseOk = DB::connection()->getDatabaseName() !== '';
+    } catch (\Throwable) {
+        //
+    }
+
+    return response()->json([
+        'status' => $databaseOk ? 'ok' : 'degraded',
+        'app' => true,
+        'database' => $databaseOk,
+        'app_key_set' => filled(config('app.key')),
+    ], $databaseOk ? 200 : 503);
+});
 
 // Public Pages
 Route::get('/', [HomeController::class, 'index'])->name('home');
